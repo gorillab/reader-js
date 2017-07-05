@@ -17,9 +17,9 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "lint": "eslint . --ignore-path=.gitignore",
+    "lint": "eslint . --ignore-path .gitignore",
     "prebuild": "yarn run clean && yarn lint",
-    "build": "babel src --out-dir=dist --minified --presets=airbnb"
+    "build": "babel src --out-dir dist --minified"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -37,5 +37,10 @@
       "browser": true
     },
     "extends": "airbnb"
+  },
+  "babel": {
+    "presets": [
+      "airbnb"
+    ]
   }
 }
