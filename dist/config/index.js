@@ -1,0 +1,1 @@
+Object.defineProperty(exports,'__esModule',{value:true});var API_URL=process.env.NODE_ENV==='production'?'//api.reader.gorillab.co/v1':'/api/v1';exports['default']=API_URL;

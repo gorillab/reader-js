@@ -1,1 +1,1 @@
-console.log('Hello World!');
+Object.defineProperty(exports,'__esModule',{value:true});exports.Sources=exports.Auth=undefined;var _auth=require('./auth');var Auth=_interopRequireWildcard(_auth);var _sources=require('./sources');var Sources=_interopRequireWildcard(_sources);function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj}else{var newObj={};if(obj!=null){for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key))newObj[key]=obj[key]}}newObj['default']=obj;return newObj}}exports.Auth=Auth;exports.Sources=Sources;
