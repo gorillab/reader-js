@@ -1,0 +1,41 @@
+{
+  "name": "reader-js",
+  "version": "1.0.0",
+  "description": "This is reader-api client for reader-web based on react",
+  "author": {
+    "name": "Gorillab",
+    "email": "hello@gorillab.co",
+    "url": "https://gorillab.co/"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorillab/reader-js.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint . --ignore-path=.gitignore",
+    "prebuild": "yarn run clean && yarn lint",
+    "build": "babel src --out-dir=dist --minified --presets=airbnb"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-airbnb": "^2.4.0",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.1",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-react": "7.1.0",
+    "rimraf": "^2.6.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": "airbnb"
+  }
+}
