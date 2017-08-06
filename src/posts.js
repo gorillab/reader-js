@@ -1,14 +1,80 @@
-import API_URL from './config';
+import qs from 'qs';
 
-export const getPosts = async (params) => {
-  const response = await fetch(`${API_URL}/posts?sort=${params.sort}&limit=${params.limit}&page=${params.page}`);
-  const data = await response.json();
-  if (!response.ok) {
-    throw data;
+import { $get, $put, $delete } from './base';
+
+const PATH = 'posts';
+
+const getPosts = async (queryParams) => {
+  const search = queryParams && typeof queryParams === 'object' ? qs.stringify(queryParams, { addQueryPrefix: true }) : '';
+
+  try {
+    const res = await $get(`${PATH}${search}`);
+
+    return res;
+  } catch (error) {
+    throw error;
   }
-
-  return data;
 };
-export const unposts = async () => {
 
+const getPost = async (id) => {
+  try {
+    const res = await $get(`${PATH}/${id}`);
+
+    return res;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const createAction = async (action, id) => {
+  try {
+    const res = await $put(`${PATH}/${id}/${action}`);
+
+    return res;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const viewPost = async (id) => {
+  const res = await createAction('view', id);
+
+  return res;
+};
+
+const sharePost = async (id) => {
+  const res = await createAction('share', id);
+
+  return res;
+};
+
+const savePost = async (id) => {
+  const res = await createAction('save', id);
+
+  return res;
+};
+
+const deleteAction = async (action, id) => {
+  try {
+    const res = await $delete(`${PATH}/${id}/${action}`);
+
+    return res;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const unSavePost = async (id) => {
+  const res = await deleteAction('save', id);
+
+  return res;
+};
+
+export {
+  getPosts,
+  getPost,
+  viewPost,
+  sharePost,
+  savePost,
+  unSavePost,
 };
