@@ -1,1 +1,1 @@
-Object.defineProperty(exports,'__esModule',{value:true});var API_URL='/api/v1';exports['default']=API_URL;
+Object.defineProperty(exports,'__esModule',{value:true});var API_URL=process.env.NODE_ENV==='development'?'/api/v1':'https://glab-reader-api.herokuapp.com/v1';exports['default']=API_URL;
