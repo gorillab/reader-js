@@ -1,4 +1,4 @@
-import API_URL from '../config';
+import API_URL from './config';
 
 export const getPosts = async (params) => {
   const response = await fetch(`${API_URL}/posts?sort=${params.sort}&limit=${params.limit}&page=${params.page}`);
