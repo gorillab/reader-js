@@ -1,7 +1,7 @@
 {
-  "name": "reader-js",
+  "name": "@gorillab/reader-js",
   "version": "1.0.0",
-  "description": "This is reader-api client for reader-web based on react",
+  "description": "A reader-api js client for reader-web",
   "author": {
     "name": "Gorillab",
     "email": "hello@gorillab.co",

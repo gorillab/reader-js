@@ -16,6 +16,16 @@ cache:
 script:
   - yarn build
 
+deploy:
+  provider: npm
+  email: "hello@gorillab.co"
+  api_key: $NPM_AUTH_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+    node: '8'
+  tag: next
+
 notifications:
   email: false
   slack:
