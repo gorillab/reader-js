@@ -16,5 +16,5 @@ yarn add @gorillab/reader-js
 or using `npm`
 
 ```
-yarn install --save @gorillab/reader-js
+npm install --save @gorillab/reader-js
 ```
