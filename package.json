@@ -1,6 +1,6 @@
 {
   "name": "@gorillab/reader-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A reader-api js client for reader-web",
   "author": {
     "name": "Gorillab",
