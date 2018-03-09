@@ -55,6 +55,7 @@
     ]
   },
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "qs": "^6.5.0"
   }
 }

@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-fetch';
+
 import API_URL from './config';
 
 const request = async (uri, method, body) => {
