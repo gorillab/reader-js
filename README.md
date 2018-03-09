@@ -5,16 +5,14 @@
 [![NPM Version](https://img.shields.io/npm/v/@gorillab/reader-js.svg)](https://www.npmjs.com/package/@gorillab/reader-js)
 [![NPM Downloads](https://img.shields.io/npm/dt/@gorillab/reader-js.svg)](https://www.npmjs.com/package/@gorillab/reader-js)
 
-reader-api client for reader-web
+universal js client for reader-api
 
 ### installation
 
 ```
 yarn add @gorillab/reader-js
-```
 
-or using `npm`
+# or
 
-```
 npm install --save @gorillab/reader-js
 ```
