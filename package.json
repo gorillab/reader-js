@@ -11,7 +11,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=9"
   },
   "repository": {
     "type": "git",
